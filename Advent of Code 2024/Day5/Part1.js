@@ -2,7 +2,6 @@ let input = require('fs').readFileSync('2024stdinD5', 'utf8').split('\n');
 let rules = [];
 let updates = [];
 let sumOfMiddleVal = 0;
-let count = 1;
 
 input.forEach((value) => {
     if (value.length === 5) {
@@ -20,8 +19,6 @@ updates.forEach((v) => {
     matchPairs(v);
 })
 
-console.log(updates.length)
-
 console.log(sumOfMiddleVal);
 
 function matchPairs(arr) {
@@ -38,7 +35,7 @@ function matchPairs(arr) {
                 return;
             }
             else if (found && (i === arr.length-2 && j === tempArr.length-1)){
-                count++;
+                console.log(arr);
                 sumOfMiddleVal += parseInt(arr[Math.floor(arr.length/2)]);
             }
         }
