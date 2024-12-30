@@ -1,4 +1,4 @@
-let input = require('fs').readFileSync('2024stdinD6', 'utf8').split('\n');
+let input = require('fs').readFileSync('stdin', 'utf8').split('\n');
 let lines = [];
 let positions = ['^', '>', 'v', '<'];
 let guardPath = [];
@@ -83,7 +83,7 @@ function startingPos(arr1, arr2, arr3) {
                 arr3.push({row: currentPos.row, collumn: currentPos.collumn, direction: currentPos.direction});
             }
         }
-        return arr3.length;
+        return arr3;
     }
 }
 const findPath = startingPos(lines, positions, guardPath);
